@@ -57,16 +57,16 @@ class playGame {
         for(let i = 0; i < 26; i++) {
             if(player1Deck[0].value > player2Deck[0].value) {
                 this.player1Score++;
-                console.log(`Player1 played ${player1Deck[0]}, player2 played ${player2Deck[0]} Player1 wins the hand. Current score player1= ${this.player1Score} Player2= ${this.player2Score}`);
+                console.log(`Player1 played ${player1Deck[0].numFace} of ${player1Deck[0].suit}, player2 played ${player2Deck[0].numFace} of ${player2Deck[0].suit} Player1 wins the hand. Current score player1= ${this.player1Score} Player2= ${this.player2Score}`);
                 player1Deck.shift();
                 player2Deck.shift();
             } else if (player2Deck[0].value > player1Deck[0].value) {
                 this.player2Score++;
-                console.log(`Player1 played ${player1Deck[0]}, player2 played ${player2Deck[0]} Player2 wins the hand. Current score player1= ${this.player1Score} Player2= ${this.player2Score}`);
+                console.log(`Player1 played ${player1Deck[0].numFace} of ${player1Deck[0].suit}, player2 played ${player2Deck[0].numFace} of ${player2Deck[0].suit} Player2 wins the hand. Current score player1= ${this.player1Score} Player2= ${this.player2Score}`);
                 player1Deck.shift();
                 player2Deck.shift();
             } else {
-                console.log(`Player1 played ${player1Deck[0]}, player2 played ${player2Deck[0]}. Tie!  Current score remains player1= ${this.player1Score}, player2= ${this.player2Score}`);
+                console.log(`Player1 played ${player1Deck[0].numFace} of ${player1Deck[0].suit}, player2 played ${player2Deck[0].numFace} of ${player2Deck[0].suit}. Tie!  Current score remains player1= ${this.player1Score}, player2= ${this.player2Score}`);
                 player1Deck.shift();
                 player2Deck.shift();
             }
