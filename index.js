@@ -8,14 +8,12 @@ class Cards {                            //creates card class with suit, number 
 
 let currentDeck = []          //array to hold unshuffled deck
 
-
 function fillDeck() {                //populates deck unshuffled
     let suit = ['Spades', 'Clubs', 'Diamonds', 'Hearts']
     let numFace = ['Ace', '2', '3', '4', '5', '6', '7', '8', '9', '10', 'Jack', 'Queen', 'King']
     let value = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]
     for (let i = 0; i < suit.length; i++) {
         for (let y = 0; y < numFace.length; y++) {
-            
             currentDeck.push(new Cards(suit[i], numFace[y], value[y]))
         }
     }
