@@ -1,4 +1,4 @@
-class Cards {
+class Cards {                            //creates card class with suit, number or face(etc "8" or 'king), and value of card for comparison
     constructor(suit, numFace, value) {
         this.suit = suit;
         this.numFace = numFace;
@@ -6,11 +6,10 @@ class Cards {
     }
 }
 
-let currentDeck = []
+let currentDeck = []          //array to hold unshuffled deck
 
-// let value = 0
 
-function fillDeck() {
+function fillDeck() {                //populates deck unshuffled
     let suit = ['Spades', 'Clubs', 'Diamonds', 'Hearts']
     let numFace = ['Ace', '2', '3', '4', '5', '6', '7', '8', '9', '10', 'Jack', 'Queen', 'King']
     let value = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]
@@ -23,7 +22,7 @@ function fillDeck() {
 }
 fillDeck();
 
-function shuffle() {
+function shuffle() {                //randomizes current deck using fisher-yates
     for(let i = currentDeck.length - 1; i >= 1; i--) {
         let j = Math.floor(Math.random() * (i + 1));
         let temp = currentDeck[j];
@@ -37,7 +36,7 @@ let player1Deck = [];
 let player2Deck = [];
 let draw = 0;
 
-while(currentDeck.length > 0) {
+while(currentDeck.length > 0) {                  // deals cards to either player
     draw = Math.random() * currentDeck.length;
     player1Deck.push(currentDeck.splice(draw, 1)[0]);
 
@@ -53,7 +52,7 @@ class playGame {
     }
             //compare index0 from player arrays
     
-    startGame() {
+    startGame() {                          //game logic
         for(let i = 0; i < 26; i++) {
             if(player1Deck[0].value > player2Deck[0].value) {
                 this.player1Score++;
