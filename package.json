@@ -1,0 +1,23 @@
+{
+  "name": "week-6-coding-assignment",
+  "version": "1.0.0",
+  "description": "Intro to JavaScript Week 6 Coding Assignment",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MattSchock/War.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/MattSchock/War/issues"
+  },
+  "homepage": "https://github.com/MattSchock/War#readme",
+  "dependencies": {
+    "chai": "^4.3.6",
+    "mocha": "^10.0.0"
+  }
+}
